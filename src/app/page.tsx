@@ -23,11 +23,12 @@ export default function Home() {
             <span className="text-xl font-bold text-white">TweetForge</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="#templates" className="text-slate-300 hover:text-white transition">Templates</Link>
-            <Link href="#pricing" className="text-slate-300 hover:text-white transition">Pricing</Link>
+            <Link href="/templates" className="text-slate-300 hover:text-white transition">Templates</Link>
+            <Link href="/pricing" className="text-slate-300 hover:text-white transition">Pricing</Link>
             <Link href="#features" className="text-slate-300 hover:text-white transition">Features</Link>
           </nav>
           <div className="flex items-center gap-4">
+            <Link href="/signin" className="text-slate-300 hover:text-white transition">Sign In</Link>
             <Link href="/dashboard" className="text-slate-300 hover:text-white transition">Sign In</Link>
             <Link href="/builder" className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full font-medium transition">
               Get Started
@@ -55,7 +56,7 @@ export default function Home() {
             <Link href="/builder" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-4 rounded-full font-semibold text-lg transition flex items-center justify-center gap-2">
               Start Building Free <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link href="#templates" className="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition border border-slate-700">
+            <Link href="/templates" className="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition border border-slate-700">
               View Templates
             </Link>
           </div>
@@ -72,11 +73,11 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {templates.map((template, i) => (
-              <div key={i} className="group bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 rounded-2xl p-6 transition cursor-pointer hover:scale-[1.02]">
+              <Link key={i} href="/templates" className="group bg-slate-800/50 border border-slate-700 hover:border-blue-500/50 rounded-2xl p-6 transition cursor-pointer hover:scale-[1.02]">
                 <div className="text-4xl mb-4">{template.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{template.name}</h3>
                 <p className="text-slate-400">{template.desc}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
