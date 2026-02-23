@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { Zap, ArrowRight, Loader2, Check, ExternalLink } from 'lucide-react'
+import { Zap, ArrowRight, Loader2, Check, ExternalLink, Edit2 } from 'lucide-react'
 
 export default function BuilderPage() {
   const router = useRouter()
@@ -12,6 +12,9 @@ export default function BuilderPage() {
   const [generated, setGenerated] = useState(false)
   const [publishing, setPublishing] = useState(false)
   const [published, setPublished] = useState(false)
+  const [editing, setEditing] = useState(false)
+  const [pageTitle, setPageTitle] = useState('Photographer Portfolio')
+  const [pageDesc, setPageDesc] = useState('Professional photography services')
 
   const handleGenerate = async () => {
     if (!prompt.trim()) return
@@ -33,14 +36,7 @@ export default function BuilderPage() {
     }, 2000)
   }
 
-  const handleView = () => {
-    // Open the main site in a new tab (demo mode)
-    alert('Opening your published page...')
-    window.open('https://halal-scanner-swart.vercel.app', '_blank')
-  }
-
   const handleViewDirect = () => {
-    // Direct view - always works in demo
     router.push('/')
   }
 
@@ -108,10 +104,14 @@ export default function BuilderPage() {
         {generated && (
           <div className="mt-8 bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-white">Your Landing Page</h3>
+              <h3 className="text-xl font-semibold text-white">Your Landing Page Preview</h3>
               <div className="flex gap-3">
-                <button className="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg font-medium transition">
-                  Edit
+                <button 
+                  onClick={() => setEditing(!editing)}
+                  className="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg font-medium transition flex items-center gap-2"
+                >
+                  <Edit2 className="w-4 h-4" />
+                  {editing ? 'Done' : 'Edit'}
                 </button>
                 <button 
                   onClick={handlePublish}
@@ -137,13 +137,42 @@ export default function BuilderPage() {
                 </button>
               </div>
             </div>
+
+            {/* Edit Mode */}
+            {editing && (
+              <div className="mb-6 bg-slate-900/50 rounded-xl p-4 border border-slate-600">
+                <h4 className="text-white font-medium mb-4">Edit Your Page</h4>
+                <div className="space-y-3">
+                  <div>
+                    <label className="block text-slate-400 text-sm mb-1">Page Title</label>
+                    <input
+                      type="text"
+                      value={pageTitle}
+                      onChange={(e) => setPageTitle(e.target.value)}
+                      className="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-slate-400 text-sm mb-1">Page Description</label>
+                    <input
+                      type="text"
+                      value={pageDesc}
+                      onChange={(e) => setPageDesc(e.target.value)}
+                      className="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white"
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Preview */}
             <div className="bg-slate-900/50 rounded-xl p-6 border border-slate-600">
               <div className="text-center py-12">
                 <div className="text-6xl mb-4">📸</div>
-                <h4 className="text-2xl font-bold text-white mb-2">Photographer Portfolio</h4>
-                <p className="text-slate-400 mb-6">Professional photography services</p>
+                <h4 className="text-2xl font-bold text-white mb-2">{pageTitle}</h4>
+                <p className="text-slate-400 mb-6">{pageDesc}</p>
                 <div className="flex justify-center gap-4">
-                  <button onClick={handleViewDirect} className="bg-white text-slate-900 px-6 py-2 rounded-full font-medium">View Portfolio</button>
+                  <button onClick={handleViewDirect} className="bg-white text-slate-900 px-6 py-2 rounded-full font-medium">View Page</button>
                   <button className="bg-slate-700 text-white px-6 py-2 rounded-full font-medium">Contact</button>
                 </div>
               </div>
