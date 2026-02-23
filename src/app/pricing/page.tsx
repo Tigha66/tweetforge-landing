@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Check, Loader2 } from 'lucide-react'
 import { loadStripe } from '@stripe/stripe-js'
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || '')
+const stripePromise = loadStripe('pk_live_51Rdzf0G3wnn7CPRMbPpVyUtlMsqNgoPv5b3GEieYfFawMMKuuf92q7y1mGmSezR81XfoCKKh2XwoAXlsFiWnPXtC00Xkkbz8Hv')
 
 export default function PricingPage() {
   const [loading, setLoading] = useState<string | null>(null)
