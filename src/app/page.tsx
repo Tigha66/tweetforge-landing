@@ -24,6 +24,7 @@ export default function Home() {
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/templates" className="text-slate-300 hover:text-white transition">Templates</Link>
+            <Link href="/showcase" className="text-slate-300 hover:text-white transition">Showcase</Link>
             <Link href="/pricing" className="text-slate-300 hover:text-white transition">Pricing</Link>
             <Link href="#features" className="text-slate-300 hover:text-white transition">Features</Link>
           </nav>
