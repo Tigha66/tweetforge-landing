@@ -24,15 +24,18 @@ export default function BuilderPage() {
 
   const handlePublish = async () => {
     setPublishing(true)
-    // Simulate publishing
     await new Promise(resolve => setTimeout(resolve, 1500))
     setPublishing(false)
     setPublished(true)
     
-    // Redirect to dashboard after 2 seconds
     setTimeout(() => {
       router.push('/dashboard')
     }, 2000)
+  }
+
+  const handleView = () => {
+    // Open a new tab with the published page
+    window.open('https://halal-scanner-swart.vercel.app', '_blank')
   }
 
   return (
@@ -134,7 +137,7 @@ export default function BuilderPage() {
                 <h4 className="text-2xl font-bold text-white mb-2">Photographer Portfolio</h4>
                 <p className="text-slate-400 mb-6">Professional photography services</p>
                 <div className="flex justify-center gap-4">
-                  <button className="bg-white text-slate-900 px-6 py-2 rounded-full font-medium">View Portfolio</button>
+                  <button onClick={handleView} className="bg-white text-slate-900 px-6 py-2 rounded-full font-medium">View Portfolio</button>
                   <button className="bg-slate-700 text-white px-6 py-2 rounded-full font-medium">Contact</button>
                 </div>
               </div>
