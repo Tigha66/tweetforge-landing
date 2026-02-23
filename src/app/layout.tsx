@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'TweetForge - AI Landing Page Studio',
+  title: 'LandingForge - AI Landing Page Studio',
   description: 'Generate beautiful landing pages in seconds with AI',
 }
 

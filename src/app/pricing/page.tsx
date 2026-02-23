@@ -79,7 +79,7 @@ export default function PricingPage() {
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
               <span className="text-white font-bold">T</span>
             </div>
-            <span className="text-xl font-bold text-white">TweetForge</span>
+            <span className="text-xl font-bold text-white">LandingForge</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#templates" className="text-slate-300 hover:text-white transition">Templates</a>

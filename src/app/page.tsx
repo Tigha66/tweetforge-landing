@@ -20,7 +20,7 @@ export default function Home() {
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
               <Zap className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">TweetForge</span>
+            <span className="text-xl font-bold text-white">LandingForge</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/templates" className="text-slate-300 hover:text-white transition">Templates</Link>
@@ -153,7 +153,7 @@ export default function Home() {
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to build your landing page?</h2>
-          <p className="text-slate-400 mb-8 text-lg">Join thousands of creators building faster with TweetForge</p>
+          <p className="text-slate-400 mb-8 text-lg">Join thousands of creators building faster with LandingForge</p>
           <Link href="/builder" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-10 py-4 rounded-full font-semibold text-lg transition">
             <Rocket className="w-5 h-5" /> Start Building Now
           </Link>
@@ -167,9 +167,9 @@ export default function Home() {
             <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-semibold">TweetForge</span>
+            <span className="text-white font-semibold">LandingForge</span>
           </div>
-          <p className="text-slate-500 text-sm">© 2026 TweetForge. All rights reserved.</p>
+          <p className="text-slate-500 text-sm">© 2026 LandingForge. All rights reserved.</p>
         </div>
       </footer>
     </div>

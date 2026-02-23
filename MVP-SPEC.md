@@ -1,7 +1,7 @@
 # MVP Spec: AI-Powered Creator Landing Page Studio
 
 ## Product Overview
-- **Name**: TweetForge Landing Studio
+- **Name**: LandingForge Landing Studio
 - **Type**: SaaS Web Application
 - **Core Functionality**: AI-powered landing page generator for creators with Stripe monetization
 - **Target Users**: Content creators, freelancers, small businesses needing quick landing pages
@@ -24,7 +24,7 @@
   - Consulting
 
 ### 3. Stripe Integration
-- **Product**: TweetForge Landing Pro
+- **Product**: LandingForge Landing Pro
 - **Pricing**: $9/month subscription
 - **Features included**:
   - All 6-8 templates

@@ -1,4 +1,4 @@
-# Repository Structure: TweetForge Landing Studio
+# Repository Structure: LandingForge Landing Studio
 
 ## Monorepo Layout
 
@@ -88,7 +88,7 @@ model Page {
 ```
 
 ## Stripe Products
-- **Product**: TweetForge Landing Pro
+- **Product**: LandingForge Landing Pro
 - **Price**: $9/month (price_...)
 - **Checkout**: Stripe Checkout Session
 - **Webhooks**: invoice.paid, customer.subscription.created/deleted

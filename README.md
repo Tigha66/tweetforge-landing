@@ -1,4 +1,4 @@
-# TweetForge - AI Landing Page Studio
+# LandingForge - AI Landing Page Studio
 
 AI-powered landing page generator for creators with Stripe payments.
 
