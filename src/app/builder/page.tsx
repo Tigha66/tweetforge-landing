@@ -37,7 +37,7 @@ export default function BuilderPage() {
   }
 
   const handleViewDirect = () => {
-    router.push('/')
+    router.push('/published')
   }
 
   return (
