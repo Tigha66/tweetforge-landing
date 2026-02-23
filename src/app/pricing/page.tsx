@@ -48,7 +48,7 @@ export default function PricingPage() {
         'Community support',
       ],
       cta: 'Get Started',
-      priceId: null,
+      priceId: 'price_1T46cXG3wnn7CPRM8ZiWXYxI',
       highlight: false,
     },
     {
