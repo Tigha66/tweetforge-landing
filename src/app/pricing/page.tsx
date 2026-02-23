@@ -65,7 +65,7 @@ export default function PricingPage() {
         'Stripe integration',
       ],
       cta: 'Start Free Trial',
-      priceId: 'price_pro_monthly', // Replace with actual Stripe price ID
+      priceId: 'price_1T46cXG3wnn7CPRM8ZiWXYxI',
       highlight: true,
     },
   ]
